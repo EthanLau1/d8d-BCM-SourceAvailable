@@ -426,6 +426,17 @@ section{padding:72px 0;position:relative;z-index:2}
   margin:28px auto 0;
   gap:16px;
 }
+.gallery__hint{
+  text-align:center;
+  margin-top:14px;
+  font-family:var(--ff-mono);
+  font-size:11.5px;
+  color:var(--ink-dim);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+}
 .g-item{
   position:relative;
   aspect-ratio:1;
@@ -1659,6 +1670,23 @@ footer{
   background:#FEF3C7;
   color:#92400E;
 }
+.pg__badge--confidential{
+  background:#111827;
+  color:#F9FAFB;
+  border-color:#111827;
+}
+.pg__confidential-watermark{
+  position:absolute;
+  bottom:10px;
+  right:12px;
+  font-family:var(--ff-mono);
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:0.04em;
+  color:rgba(17,17,17,0.32);
+  pointer-events:none;
+  z-index:4;
+}
 .pg__stage-info{
   margin-top:14px;
   padding-top:12px;
@@ -1910,6 +1938,9 @@ footer{
       <div class="g-item"><span class="g-item__num">#5227</span><span class="g-item__dots dots-4">★ ★ ★ ★ ☆</span><img src="./images/5227.png" alt="BCM #5227 · Pepsi Edition" data-i18n-alt="g_alt3"></div>
       <div class="g-item"><span class="g-item__num">#5765</span><span class="g-item__dots dots-4">★ ★ ★ ★ ☆</span><img src="./images/5765.png" alt="BCM #5765 · 7-Up Edition" data-i18n-alt="g_alt4"></div>
     </div>
+    <div class="gallery__hint">
+      <span data-i18n="nft_preview_note">🔒 官方首发抽样预热 · 雾化剪影防枚举展示 (CC0 公开前保密预览)</span>
+    </div>
 
     <!-- Original Design & CC0 Dedication Statement (Placed directly below 7,700 NFT Gallery) -->
     <div class="orig__grid" style="border-top:1.5px dashed var(--line);padding-top:40px;margin-top:48px;">
@@ -1978,6 +2009,7 @@ footer{
           <div class="pg__badge-row">
             <span class="pg__badge">Garage DIY</span>
             <span class="pg__badge brand-neutral" id="pgBadgeRarity">SSR Classic Cruiser · #55</span>
+            <span class="pg__badge pg__badge--confidential" data-i18n="pg_confidential_badge">🔒 Frosted Mosaic</span>
           </div>
           <!-- Layer 1: Earth Background -->
           <img src="./images/playground/bg_earth.png" alt="Earth BG" class="pg__layer pg__layer-bg">
@@ -1985,6 +2017,7 @@ footer{
           <img src="./images/playground/wheel_neutral.png" alt="Neutral Wheel" class="pg__layer pg__layer-wheel" id="pgWheel">
           <!-- Layer 3: Dynamic Bespoke Chassis Livery -->
           <img src="./images/playground/classic.png" alt="Bike Body" class="pg__layer pg__layer-bike" id="pgBike">
+          <div class="pg__confidential-watermark" data-i18n="pg_confidential_wm">CONFIDENTIAL SILHOUETTE · 概念保密测试</div>
         </div>
 
         <div class="pg__stage-info">
@@ -1993,8 +2026,8 @@ footer{
             <p id="pgBikeDesc">Authentic twin-tube chassis · Iconic American cruiser profile</p>
           </div>
           <div style="text-align:right">
-            <span style="font-family:var(--ff-mono);font-size:12px;color:var(--ink-dim);display:block" data-i18n="pg_spec_lbl">底盘轮组设定</span>
-            <span style="font-family:var(--ff-marker);font-size:14px;color:var(--ink)" data-i18n="pg_spec_val">⚙️ 中立工程原型轮组（无Logo）</span>
+            <span style="font-family:var(--ff-mono);font-size:12px;color:var(--ink-dim);display:block" data-i18n="pg_spec_lbl">工程试制与保密设定</span>
+            <span style="font-family:var(--ff-marker);font-size:13.5px;color:var(--ink)" data-i18n="pg_spec_val">⚙️ 原型轮组 · 🔒 轮廓保密薄马赛克</span>
           </div>
         </div>
 
@@ -2478,16 +2511,19 @@ function exportBikePoster() {
       bikeImg.onload = () => {
         ctx.drawImage(bikeImg, 0, 0, 800, 800);
         
-        ctx.fillStyle = 'rgba(17, 17, 17, 0.85)';
-        ctx.fillRect(24, 24, 280, 56);
+        ctx.fillStyle = 'rgba(17, 17, 17, 0.88)';
+        ctx.fillRect(24, 24, 300, 68);
         ctx.strokeStyle = '#FFFFFF';
         ctx.lineWidth = 1.5;
-        ctx.strokeRect(24, 24, 280, 56);
+        ctx.strokeRect(24, 24, 300, 68);
         ctx.fillStyle = '#FFFFFF';
-        ctx.font = 'bold 16px monospace';
-        ctx.fillText('BCM Garage · ' + currentPgBike.slug.toUpperCase(), 36, 48);
+        ctx.font = 'bold 15px monospace';
+        ctx.fillText('BCM Garage · ' + currentPgBike.slug.toUpperCase(), 36, 46);
         ctx.font = '12px sans-serif';
-        ctx.fillText('Bespoke Frame · Prototype Wheel Spec', 36, 66);
+        ctx.fillText('Bespoke Frame · Prototype Wheel Spec', 36, 64);
+        ctx.fillStyle = '#CBD5E1';
+        ctx.font = '10px monospace';
+        ctx.fillText('🔒 Confidential Silhouette · Frosted Mosaic', 36, 80);
 
         const link = document.createElement('a');
         link.download = 'BCM_Garage_' + currentPgBike.slug + '.png';
@@ -2568,6 +2604,7 @@ const BCM_I18N = {
     nft_num: "02 / NFT COLLECTION",
     nft_title: "7,700 <span class=\"hl\">One-of-a-Kind</span> Digital Motorbike NFTs",
     nft_lead: "Each machine pairs 1 bespoke chassis with 1 bottle cap element under the CC0 Public Domain dedication.",
+    nft_preview_note: "🔒 Official Pre-Mint Preview · Obfuscated mosaic silhouettes to prevent pre-reveal enumeration",
     nft_orig_title: "🎨 Original Design & CC0 Dedication Statement",
     nft_orig_p1: "<strong>BCM = BottleCap Motorcycle</strong>: An artistic synergy of discarded bottle caps and mechanical motorbikes. Each complete BCM digital motorcycle = <strong>Bespoke Chassis & Mechanical Engineering (Original Motorcycle)</strong> + <em>Everyday Beverage Bottle Cap Elements (Discarded BottleCaps)</em>.",
     nft_orig_p2: "<strong>Chassis and mechanical architecture are 100% our original design</strong>: Comprising 101 bespoke frames, skeletal structures, wheel hubs, engines, handlebars, and suspension systems, conceived and illustrated entirely in-house. These are <strong>our authentic artisan creations, over which we retain full intellectual provenance</strong>.",
@@ -2589,12 +2626,16 @@ const BCM_I18N = {
     pg_num: "03 / WORKSHOP PLAYGROUND",
     pg_title: "Playground · <span class=\"hl\">Bespoke Chassis Test Bench</span>",
     pg_lead: "Zero-barrier trial · Explore 6 featured liveries from our 101 bespoke frames, equipped with neutral engineering prototype wheels (non-branded bottle caps). Anyone can build and experiment freely without owning an NFT or connecting a wallet!",
+    pg_confidential_badge: "🔒 Frosted Mosaic",
+    pg_confidential_wm: "CONFIDENTIAL SILHOUETTE · PROTOTYPE BENCH",
+    pg_spec_lbl: "Chassis & Spec Secrecy",
+    pg_spec_val: "⚙️ Prototype Wheels · 🔒 Frosted Mosaic Silhouette",
     pg_btn_rand: "🎲 Randomise Livery",
     pg_btn_poster: "📸 Export Poster",
     pg_chooser_t: "Select Bespoke Livery (6 Featured Builds)",
     pg_chooser_s: "Click to switch",
-    pg_wheel_q: "💡 Why are wheels fixed prototypes rather than branded bottle caps?",
-    pg_wheel_a: "BCM has not yet deployed its official on-chain NFT smart contracts. To safeguard the novelty, scarcity, and metadata integrity of the full 7,700 collection prior to official release, the Playground employs experimental <strong>engineering prototype wheels (unbranded)</strong> for demonstration.<br>Any creator can explore the mechanical contours and bespoke chassis designs without owning an NFT or connecting a wallet.",
+    pg_wheel_q: "💡 Why are chassis silhouettes lightly blurred with mosaic & wheels unbranded prototypes?",
+    pg_wheel_a: "BCM has not yet deployed its official on-chain NFT smart contracts. To safeguard the novelty, scarcity, and metadata integrity of the full 7,700 collection prior to official release, the Playground presents chassis contours under an intentional <strong>soft frosted mosaic</strong> and pairs them with <strong>experimental engineering prototype wheels (unbranded)</strong>.<br>Any creator can explore vehicle proportions, bespoke color themes, and body posture without compromising the mystery of the final collection.",
     daily_num: "04 / DAILY MINT",
     daily_lead: "Smart contract generates and releases 1 unique motorbike on-chain every 24 hours for global community bidding and minting.",
     daily_bid_status: "Current Highest Bid: <span style=\"color:#059669;font-size:22px;font-family:var(--ff-mono)\">0.05 ETH</span> · Time Remaining: <span style=\"font-family:var(--ff-mono)\">08h : 24m : 19s</span>",
@@ -2748,6 +2789,7 @@ const BCM_I18N = {
     nft_num: "02 / NFT",
     nft_title: "7,700 个<span class=\"hl\">独一无二</span>的数字机车 NFT",
     nft_lead: "每一辆由 1 个原创车架 + 1 个瓶盖元素组合而成，CC0 开放协议。",
+    nft_preview_note: "🔒 官方首发抽样预热 · 雾化剪影防枚举展示 (CC0 公开前保密预览)",
     nft_orig_title: "🎨 原创设计与 CC0 协议声明",
     nft_orig_p1: "<strong>BCM = BottleCap Motorcycle（瓶盖机车）</strong>：名字直观体现了“废弃瓶盖 + 机械机车”的艺术结合。一辆完整的 BCM 数字机车 = <strong>原创车架与机械设计（自主原创 Motorcycle）</strong> + <em>日常饮品瓶盖元素（品牌废弃 BottleCap）</em>。",
     nft_orig_p2: "<strong>车身与机械结构是我们团队的原创设计</strong>：包括 101 个独立车架、机械骨架、轮毂、引擎、把手、避震系统等。由主创团队完全原创设计与数字绘制。这是<strong>我们的原创工匠作品，拥有完整自主设计权</strong>。",
@@ -2769,12 +2811,16 @@ const BCM_I18N = {
     pg_num: "03 / 车库试玩工坊",
     pg_title: "Playground · <span class=\"hl\">原创车架试配台</span>",
     pg_lead: "零门槛体验 · 选用 101 款原创车架中的精选 6 款涂装，搭载中立工程原型轮组（非商业品牌瓶盖），任何玩家无需持有 NFT 均可随时试玩组装！",
+    pg_confidential_badge: "🔒 轮廓保密薄马赛克",
+    pg_confidential_wm: "CONFIDENTIAL SILHOUETTE · 概念保密测试",
+    pg_spec_lbl: "工程试制与保密设定",
+    pg_spec_val: "⚙️ 原型轮组 · 🔒 轮廓保密薄马赛克",
     pg_btn_rand: "🎲 随机换涂装",
     pg_btn_poster: "📸 保存改装海报",
     pg_chooser_t: "选择原创涂装（6 款精选试玩）",
     pg_chooser_s: "点击切换",
-    pg_wheel_q: "💡 为什么轮子是单独固定的，而不是品牌瓶盖？",
-    pg_wheel_a: "BCM 尚未部署正式 NFT 智能合约。为保护官方 7,700 款完整作品在正式揭晓时的稀缺惊喜与防抓包枚举，Playground 采用实验性的<strong>工程中立原型轮组（非商业饮料瓶盖）</strong>进行组合演示。<br>任何玩家无需持有 NFT、无需连接钱包，都可以直接感受 101 款原创车架的设计轮廓与改装魅力。",
+    pg_wheel_q: "💡 为什么车身轮廓打上薄马赛克、轮组采用未授权原型？",
+    pg_wheel_a: "BCM 官方链上智能合约尚未正式部署。为在正式发售前保护 7,700 部数字机车的独特性、稀缺性与机械细节机密，试玩工坊对车身轮廓采用了<strong>轻微薄马赛克（Frosted Mosaic）保密处理</strong>，并搭配<strong>中立工程原型轮组（无Logo）</strong>。<br>任何玩家无需持有 NFT 均可无门槛体验 6 款代表性车架的姿态比例与涂装色系，同时不泄露最终高精工艺细节。",
     daily_num: "04 / 每日一 mint",
     daily_lead: "智能合约每 24 小时链上生成并释放 1 辆机车供全球社区竞拍与铸造。",
     daily_bid_status: "当前最高出价：<span style=\"color:#059669;font-size:22px;font-family:var(--ff-mono)\">0.05 ETH</span> · 剩余时间：<span style=\"font-family:var(--ff-mono)\">08h : 24m : 19s</span>",
