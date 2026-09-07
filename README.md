@@ -3,11 +3,11 @@
 > **D&D Studio (广州 D&D 团队) 独立出品 · 准商业级数字艺术与文化 IP 项目**  
 > **© 2023–2026 D&D Team. All Rights Reserved. 版权所有·侵权必究**
 
-[![License: Proprietary](https://img.shields.io/badge/License-Proprietary%20%2F%20All%20Rights%20Reserved-red.svg)](https://github.com/EthanLau1/d8d-BCM-AlxOriginSummi)
-[![Status: Pre-Commercial Preview](https://img.shields.io/badge/Status-Pre--Commercial%20Preview-blue.svg)](https://github.com/EthanLau1/d8d-BCM-AlxOriginSummi)
-[![Art Assets: 101 Original Frames](https://img.shields.io/badge/Art-101%20Original%20Frames-brightgreen.svg)](https://github.com/EthanLau1/d8d-BCM-AlxOriginSummi)
-[![Digital Collection: 7,700 Pieces](https://img.shields.io/badge/Supply-7%2C700%20Unique%20Pieces-orange.svg)](https://github.com/EthanLau1/d8d-BCM-AlxOriginSummi)
-[![Release Model: 24h Continuous](https://img.shields.io/badge/Mechanism-24h%20Continuous%20Release-purple.svg)](https://github.com/EthanLau1/d8d-BCM-AlxOriginSummi)
+[![License: Proprietary](https://img.shields.io/badge/License-Proprietary%20%2F%20All%20Rights%20Reserved-red.svg)](https://github.com/EthanLau1/d8d-BCM-SourceAvailable)
+[![Status: Pre-Commercial Preview](https://img.shields.io/badge/Status-Pre--Commercial%20Preview-blue.svg)](https://github.com/EthanLau1/d8d-BCM-SourceAvailable)
+[![Art Assets: 101 Original Frames](https://img.shields.io/badge/Art-101%20Original%20Frames-brightgreen.svg)](https://github.com/EthanLau1/d8d-BCM-SourceAvailable)
+[![Digital Collection: 7,700 Pieces](https://img.shields.io/badge/Supply-7%2C700%20Unique%20Pieces-orange.svg)](https://github.com/EthanLau1/d8d-BCM-SourceAvailable)
+[![Release Model: 24h Continuous](https://img.shields.io/badge/Mechanism-24h%20Continuous%20Release-purple.svg)](https://github.com/EthanLau1/d8d-BCM-SourceAvailable)
 
 ---
 
@@ -113,7 +113,7 @@
 ## 📁 仓库代码与文件清单 (Repository Manifest)
 
 ```text
-EthanLau1/d8d-BCM-AlxOriginSummi/
+EthanLau1/d8d-BCM-SourceAvailable/
 ├── README.md               # 本主文档（版权声明、功能全览与商业路线图）
 ├── index.html              # 纯静态独立主页面（中英双语、车库试玩、Hero 社区矩阵与灯箱）
 ├── start_demo.command      # macOS 1-点击即启动轻量服务脚本 (端口 8888)
