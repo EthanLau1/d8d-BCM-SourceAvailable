@@ -1506,54 +1506,13 @@ section{padding:72px 0;position:relative;z-index:2}
   overflow:hidden;
   background:#F3F3F3;
   box-shadow:6px 6px 0 var(--ink);
-  cursor:pointer;
-  transition:transform .2s ease, box-shadow .2s ease;
   display:block;
-}
-.cta__spread-card:hover{
-  transform:translateY(-2px);
-  box-shadow:8px 8px 0 var(--ink);
-}
-.cta__spread-card:active{
-  transform:translateY(1px);
-  box-shadow:4px 4px 0 var(--ink);
 }
 .cta__spread-img{
   width:100%;
   height:auto;
   display:block;
   object-fit:cover;
-  transition:transform .25s ease;
-}
-.cta__spread-card:hover .cta__spread-img{
-  transform:scale(1.008);
-}
-.cta__spread-overlay{
-  position:absolute;
-  top:14px;
-  right:14px;
-  z-index:3;
-}
-.cta__spread-zoom{
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-  background:rgba(17, 17, 17, 0.88);
-  color:#FFFFFF;
-  padding:6px 14px;
-  border-radius:999px;
-  font-family:var(--ff-title);
-  font-size:12px;
-  font-weight:700;
-  border:1.5px solid rgba(255, 255, 255, 0.4);
-  box-shadow:0 4px 12px rgba(0, 0, 0, 0.25);
-  backdrop-filter:blur(4px);
-  transition:all .15s ease;
-}
-.cta__spread-card:hover .cta__spread-zoom{
-  background:var(--ink);
-  color:var(--yellow, #FEE000);
-  border-color:var(--yellow, #FEE000);
 }
 .cta__spread-meta{
   display:flex;
@@ -2242,6 +2201,137 @@ footer{
       </div>
     </div>
 
+
+    <!-- 05.1 Real-World Footprints: 6 Action & Workshop Photos (真实足迹 · 线下走访与手作实录) -->
+    <div class="footprints-block">
+      <div class="footprints__header">
+        <div class="footprints__title-wrap">
+          <span class="footprints__badge" data-i18n="fp_badge">📸 真实足迹</span>
+          <h3 class="footprints__title" data-i18n="fp_title" style="margin:0;font-family:var(--ff-title);font-size:18px;">真实足迹 · 线下走访与手作纪实</h3>
+        </div>
+        <div class="footprints__sub" data-i18n="fp_sub">从废品回收站取材到工坊桌面打样，记录每一辆机车的真实诞生过程</div>
+        <span class="footprints__hint" data-i18n="fp_hint">← 左右滑动浏览 · 点击照片查看大图 →</span>
+      </div>
+      <div class="footprints__reel">
+        <!-- 1: 废品回收站 -->
+        <div class="footprint-card" onclick="openHeroModal('images/community/fp_scrapyard.png', currentLang === 'zh' ? '📍 废品回收站 · 废金属堆寻宝：走访废品回收站，为机车车架寻找低碳灵感与硬核机械美学' : '📍 Scrap Yard · Scrap Metal Scavenge: Visiting waste depots to harvest low-carbon chassis inspiration')">
+          <div class="footprint-card__img-wrap">
+            <img src="images/community/fp_scrapyard.png" alt="废品回收站" class="footprint-card__img" loading="lazy">
+            <span class="footprint-card__tag" data-i18n="fp1_tag">📍 废品回收站</span>
+            <span class="footprint-card__zoom" data-i18n="comm_zoom_chart">🔍 放大</span>
+          </div>
+          <div class="footprint-card__body">
+            <div class="footprint-card__title" data-i18n="fp1_title">废金属堆寻宝</div>
+            <div class="footprint-card__note" data-i18n="fp1_note">走访废品回收站，为机车车架寻找低碳灵感。</div>
+          </div>
+        </div>
+
+        <!-- 2: 超市货架瓶盖采风 -->
+        <div class="footprint-card" onclick="openHeroModal('images/community/fp_caps_hunting.png', currentLang === 'zh' ? '📍 瓶盖采风 · 超市货架瓶盖谱系：搜集各大品牌饮品废弃盖色板，建立波普拼贴色彩库' : '📍 Cap Hunting · Supermarket Cap Archive: Sourcing diverse beverage bottle caps for pop art palettes')">
+          <div class="footprint-card__img-wrap">
+            <img src="images/community/fp_caps_hunting.png" alt="瓶盖采风" class="footprint-card__img" loading="lazy">
+            <span class="footprint-card__tag" data-i18n="fp2_tag">📍 瓶盖采风</span>
+            <span class="footprint-card__zoom" data-i18n="comm_zoom_chart">🔍 放大</span>
+          </div>
+          <div class="footprint-card__body">
+            <div class="footprint-card__title" data-i18n="fp2_title">超市货架瓶盖谱系</div>
+            <div class="footprint-card__note" data-i18n="fp2_note">搜集各大品牌饮品废弃盖色板，建立波普拼贴色彩库。</div>
+          </div>
+        </div>
+
+        <!-- 3: 社区手作工坊打样 -->
+        <div class="footprint-card" onclick="openHeroModal('images/community/fp_workshop.png', currentLang === 'zh' ? '📍 手作工坊 · 桌面打样与实录：刀垫、卡纸与胶带，带创作者亲手完成第一辆纸构机车' : '📍 Live Workshop · Paper Cut & Prototyping: Hands-on prototyping with craft knives, cardstock, and reclaimed caps')">
+          <div class="footprint-card__img-wrap">
+            <img src="images/community/fp_workshop.png" alt="手作工坊" class="footprint-card__img" loading="lazy">
+            <span class="footprint-card__tag" data-i18n="fp3_tag">📍 手作工坊</span>
+            <span class="footprint-card__zoom" data-i18n="comm_zoom_chart">🔍 放大</span>
+          </div>
+          <div class="footprint-card__body">
+            <div class="footprint-card__title" data-i18n="fp3_title">桌面打样与实录</div>
+            <div class="footprint-card__note" data-i18n="fp3_note">刀垫、卡纸与胶带，带创作者亲手完成第一辆纸构机车。</div>
+          </div>
+        </div>
+
+        <!-- 4: BCM团队手作日记 -->
+        <div class="footprint-card" onclick="openHeroModal('images/community/fp_handcraft_diary.png', currentLang === 'zh' ? '📍 手作日记 · NFT 实体手办装配：电磨精密开孔与乐高模块嵌合，团队硬核打磨物理实体机车' : '📍 Maker Diary · Physical NFT Prototype: Precision drilling and manual finishing of physical figurine components')">
+          <div class="footprint-card__img-wrap">
+            <img src="images/community/fp_handcraft_diary.png" alt="手作日记" class="footprint-card__img" loading="lazy">
+            <span class="footprint-card__tag" data-i18n="fp4_tag">📍 手作日记</span>
+            <span class="footprint-card__zoom" data-i18n="comm_zoom_chart">🔍 放大</span>
+          </div>
+          <div class="footprint-card__body">
+            <div class="footprint-card__title" data-i18n="fp4_title">NFT 实体手办装配</div>
+            <div class="footprint-card__note" data-i18n="fp4_note">电磨精密开孔与乐高模块嵌合，团队打磨实体机车。</div>
+          </div>
+        </div>
+
+        <!-- 5: #287创意园装置 -->
+        <div class="footprint-card" onclick="openHeroModal('images/community/fp_art_frame.png', currentLang === 'zh' ? '📍 艺术装置 · #287创意园 Second Life：实车后视镜与经典原盖装裱，实体艺术重塑废弃物生命周期' : '📍 Art Installation · #287 Creative Park: Second Life framed collage featuring authentic caps and bike mirrors')">
+          <div class="footprint-card__img-wrap">
+            <img src="images/community/fp_art_frame.png" alt="艺术装置" class="footprint-card__img" loading="lazy">
+            <span class="footprint-card__tag" data-i18n="fp5_tag">📍 艺术装置</span>
+            <span class="footprint-card__zoom" data-i18n="comm_zoom_chart">🔍 放大</span>
+          </div>
+          <div class="footprint-card__body">
+            <div class="footprint-card__title" data-i18n="fp5_title">#287创意园 Second Life</div>
+            <div class="footprint-card__note" data-i18n="fp5_note">实车后视镜与原盖装裱，重塑废弃物生命周期。</div>
+          </div>
+        </div>
+
+        <!-- 6: 街头挂板 -->
+        <div class="footprint-card" onclick="openHeroModal('images/community/fp_board_riders.png', currentLang === 'zh' ? '📍 街头挂板 · 亚洲沙示骑手牌：复古亚洲汽水瓶盖与机车手卡板，将街头骑行融入生活空间' : '📍 Wall Artifact · Adventure Riders Board: Original rider illustration mounted with vintage Asia Soda tin caps')">
+          <div class="footprint-card__img-wrap">
+            <img src="images/community/fp_board_riders.png" alt="街头挂板" class="footprint-card__img" loading="lazy">
+            <span class="footprint-card__tag" data-i18n="fp6_tag">📍 街头挂板</span>
+            <span class="footprint-card__zoom" data-i18n="comm_zoom_chart">🔍 放大</span>
+          </div>
+          <div class="footprint-card__body">
+            <div class="footprint-card__title" data-i18n="fp6_title">亚洲沙示骑手牌</div>
+            <div class="footprint-card__note" data-i18n="fp6_note">复古亚洲汽水瓶盖与卡板，融入生活空间。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 05.2 Physical Merch & Accessories: 3 Items (实体配件与周边衍生) -->
+    <div class="footprints-block" style="margin-top: 24px; padding-top: 20px;">
+      <div class="footprints__header">
+        <div class="footprints__title-wrap">
+          <span class="footprints__badge" data-i18n="ext_badge">🛵 周边配件</span>
+          <h3 class="footprints__title" data-i18n="ext_title" style="margin:0;font-family:var(--ff-title);font-size:18px;">BCM 实体配件与周边衍生</h3>
+        </div>
+        <div class="footprints__sub" data-i18n="ext_sub">极简设计与品牌联名，让数字艺术自然融入日常</div>
+      </div>
+      <div class="extensions-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 14px;">
+        <!-- 7: D&D Cup -->
+        <div class="ext-card" onclick="openHeroModal('images/community/cup.png', currentLang === 'zh' ? 'D&D Studio BCM 专属随行水杯 · 官方周边实体配件' : 'D&D Studio BCM Exclusive Mug · Official Physical Merch')" style="background: #FFFFFF; border: 2px solid var(--ink); border-radius: 10px; padding: 8px; box-shadow: 3px 3px 0 var(--ink); transition: transform 0.2s, box-shadow 0.2s; cursor: pointer; text-align: center;">
+          <div style="border-radius: 6px; overflow: hidden; background: radial-gradient(circle at 50% 50%, #FFFFFF 25%, #F6F4ED 75%, #ECE7DA 100%); height: 210px; display: flex; align-items: center; justify-content: center; border: 1.5px solid var(--ink); position: relative;">
+            <img src="images/community/cup.png" alt="D&D Studio BCM Cup" style="max-width: 88%; max-height: 88%; object-fit: contain; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.12)); transition: transform 0.2s;">
+            <span class="footprint-card__zoom" style="position: absolute; bottom: 6px; right: 6px; opacity: 0.9;" data-i18n="comm_zoom_chart">🔍 放大</span>
+          </div>
+          <div style="font-family: var(--ff-title); font-size: 14px; font-weight: 800; color: var(--ink); margin-top: 10px; padding: 2px 4px 6px;" data-i18n="ext_cup">D&D Studio BCM 专属水杯</div>
+        </div>
+
+        <!-- 8: BBC Heytea Ball -->
+        <div class="ext-card" onclick="openHeroModal('images/community/heytea_ball.png', currentLang === 'zh' ? 'BBC × 喜茶 3D 毛毛球 · 跨界潮玩与绿色联名周边' : 'BBC × Heytea 3D Fluffy Ball · Crossover Vinyl Merch')" style="background: #FFFFFF; border: 2px solid var(--ink); border-radius: 10px; padding: 8px; box-shadow: 3px 3px 0 var(--ink); transition: transform 0.2s, box-shadow 0.2s; cursor: pointer; text-align: center;">
+          <div style="border-radius: 6px; overflow: hidden; background: radial-gradient(circle at 50% 50%, #FFFFFF 25%, #F6F4ED 75%, #ECE7DA 100%); height: 210px; display: flex; align-items: center; justify-content: center; border: 1.5px solid var(--ink); position: relative;">
+            <img src="images/community/heytea_ball.png" alt="BBC Heytea 3D Fluffy Ball" style="max-width: 88%; max-height: 88%; object-fit: contain; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.12)); transition: transform 0.2s;">
+            <span class="footprint-card__zoom" style="position: absolute; bottom: 6px; right: 6px; opacity: 0.9;" data-i18n="comm_zoom_chart">🔍 放大</span>
+          </div>
+          <div style="font-family: var(--ff-title); font-size: 14px; font-weight: 800; color: var(--ink); margin-top: 10px; padding: 2px 4px 6px;" data-i18n="ext_heytea">BBC × 喜茶 3D 毛毛球</div>
+        </div>
+
+        <!-- 9: AW19 Poster -->
+        <div class="ext-card" onclick="openHeroModal('images/community/aw19_poster.jpg', currentLang === 'zh' ? 'BCM AW 19 展出活动海报 · 线下设计展现场纪实' : 'BCM AW 19 Event Poster · Design Exhibition Record')" style="background: #FFFFFF; border: 2px solid var(--ink); border-radius: 10px; padding: 8px; box-shadow: 3px 3px 0 var(--ink); transition: transform 0.2s, box-shadow 0.2s; cursor: pointer; text-align: center;">
+          <div style="border-radius: 6px; overflow: hidden; background: #111111; height: 210px; display: flex; align-items: center; justify-content: center; border: 1.5px solid var(--ink); position: relative;">
+            <img src="images/community/aw19_poster.jpg" alt="BCM AW 19 EN" style="max-width: 100%; max-height: 100%; object-fit: cover; width: 100%; height: 100%;">
+            <span class="footprint-card__zoom" style="position: absolute; bottom: 6px; right: 6px; opacity: 0.9;" data-i18n="comm_zoom_chart">🔍 放大</span>
+          </div>
+          <div style="font-family: var(--ff-title); font-size: 14px; font-weight: 800; color: var(--ink); margin-top: 10px; padding: 2px 4px 6px;" data-i18n="ext_aw19">BCM AW 19 展出活动海报</div>
+        </div>
+      </div>
+    </div>
+
     <div class="community__footer-note" data-i18n-html="comm_footer_note">⚡ <strong>BCM HERO Pixel Runners</strong>: CC0 Public Domain · Launching on-chain soon · Continually empowering physical craft workshops</div>
   </div>
 </section>
@@ -2318,36 +2408,36 @@ footer{
     <h2 class="sec__title" data-i18n-html="faq_title">Frequently Asked Questions <span class="hl">About BCM</span></h2>
     <div class="faq__list">
       <div class="faq__item">
-        <div class="faq__q" data-i18n="faq_q1">What does the name BCM stand for?</div>
-        <div class="faq__a"><div class="faq__a-inner" data-i18n-html="faq_a1"><b>BCM stands for BottleCap Motorcycle</b>.<br>It springs from the clash and reconstruction of two worlds: on one hand, the humblest, everyday disposable item — <b>BottleCap (discarded plastic drink caps)</b>; on the other, the industrial aesthetics of freedom and raw horsepower — the <b>Motorcycle</b>.<br>Through 101 bespoke chassis designs, the team transforms discarded caps into mechanical wheels, ensuring overlooked waste is seen anew as striking contemporary art and digital collectibles.</div></div>
+        <div class="faq__q" data-i18n="faq_q1">BCM as Digital Art NFT</div>
+        <div class="faq__a"><div class="faq__a-inner" data-i18n-html="faq_a1"><b>BCM (BottleCap Motorcycle) is far more than a simple NFT — it is an original eco-art initiative fusing physical craftsmanship with generative digital art.</b><br><br>· <b>Handcrafted Physical Origin</b>: Rooted in <b>101 bespoke motorcycle chassis</b> welded and finished from scrap metal parts over 3 years by our design team.<br>· <b>Pop-Art Reclaimed Collage</b>: Sanitizing discarded beverage bottle caps to transform <b>109 iconic cap palettes and silhouettes</b> into mechanical wheel rims.<br>· <b>Generative Digital Twins</b>: Procedurally combining the 101 bespoke chassis with 109 cap wheels into <b>7,700 unique on-chain digital art pieces</b>. Every collectible stands as a digital testament to creative upcycling and responsible consumption.</div></div>
       </div>
       <div class="faq__item">
-        <div class="faq__q" data-i18n="faq_q2">What are BCM Heroes, and what is their relationship to BCM Motorbikes?</div>
-        <div class="faq__a"><div class="faq__a-inner" data-i18n-html="faq_a2"><b>BCM Heroes are pure community environmental champions, not riders for the bikes.</b><br>Our core aim in initiating BCM Hero co-creation is exploring <b>"what Earth-defending eco-champions look like in the eyes of diverse creators — especially children and grassroots makers."</b><br><br>· <b>BCM Motorbikes</b>: Symbolising low-carbon mobility and green transit, embodied by 101 bespoke chassis and CC0 on-chain collectibles.<br>· <b>BCM Heroes</b>: An independent, community-driven <b>eco-character universe</b>. Anyone can define their own champion through "Sketch ➔ Clay Moulding ➔ Assign Eco Superpower" to receive an archival registry code. You <b>do not need to hold an NFT</b> — participation is 100% barrier-free!</div></div>
+        <div class="faq__q" data-i18n="faq_q2">What is an NFT?</div>
+        <div class="faq__a"><div class="faq__a-inner" data-i18n-html="faq_a2"><b>An NFT (Non-Fungible Token) is a cryptographic certificate of digital ownership and authenticity secured on a blockchain.</b><br><br>· <b>Unique & Indivisible</b>: Unlike interchangeable cryptocurrencies or cash bills, every NFT possesses a unique on-chain Token ID and cannot be duplicated, split, or swapped 1:1.<br>· <b>True Sovereign Ownership</b>: Unlike traditional internet assets stored on corporate servers, an NFT is permanently recorded on a decentralized public ledger, ensuring your asset remains yours forever in your private wallet.</div></div>
       </div>
       <div class="faq__item">
-        <div class="faq__q" data-i18n="faq_q3">How are the motorbikes released? (What is the Daily Mint?)</div>
-        <div class="faq__a"><div class="faq__a-inner" data-i18n-html="faq_a3"><b>One Machine. Every Day. Forever.</b><br>The smart contract automatically generates and releases 1 bespoke motorbike every 24 hours for public minting and auction. Upon auction conclusion, the next machine seamlessly generates and begins the subsequent 24-hour cycle.</div></div>
+        <div class="faq__q" data-i18n="faq_q3">What is Web3?</div>
+        <div class="faq__a"><div class="faq__a-inner" data-i18n-html="faq_a3"><b>Web3 represents the decentralized next generation of the internet, centered on the paradigm of "Read, Write, and Own."</b><br><br>· <b>Web 1.0 (Read)</b>: The static portal era where users passively consumed webmaster content.<br>· <b>Web 2.0 (Read + Write)</b>: The social platform era where users create content, but tech giants control user data, accounts, and monetization.<br>· <b>Web 3.0 (Read + Write + Own)</b>: The decentralized era where users truly own their digital identity, data, and virtual assets via cryptographic smart contracts without corporate intermediaries.</div></div>
       </div>
       <div class="faq__item">
-        <div class="faq__q" data-i18n="faq_q4">How are copyright (CC0) and original provenance defined for BCM NFTs?</div>
-        <div class="faq__a"><div class="faq__a-inner" data-i18n-html="faq_a4"><b>All 101 chassis and mechanical frameworks are 100% original creations of our team</b>, crafted in-house by our industrial designers. The entire 7,700 digital motorbike collection adopts the <b>CC0 1.0 Universal (Public Domain)</b> dedication, freely open for commercial application and remixing. Beverage logos appearing on bottle cap wheels remain the registered trademarks of their respective owners, forming a Pop Art cultural homage without commercial endorsement.</div></div>
+        <div class="faq__q" data-i18n="faq_q4">The Relationship Between Web3 and NFTs</div>
+        <div class="faq__a"><div class="faq__a-inner" data-i18n-html="faq_a4"><b>Web3 is the decentralized ecosystem, while NFTs are the essential containers carrying unique value, culture, and sovereign ownership across this new internet.</b><br><br>· <b>Web3 Powers Trust for NFTs</b>: Without decentralized blockchain rails, digital ownership cannot be verified independently of corporate gatekeepers.<br>· <b>NFTs Bring Cultural Substance to Web3</b>: NFTs expand blockchain technology beyond abstract finance into generative art, community identity, and physical-digital crossovers.<br>· <b>How BCM Applies This</b>: BCM utilizes Web3 smart contracts to ensure the ownership and CC0 remix rights of all 7,700 machines permanently belong to the global rider community.</div></div>
       </div>
       <div class="faq__item">
-        <div class="faq__q" data-i18n="faq_q5">What is a "death spiral", and could it happen to BCM?</div>
-        <div class="faq__a"><div class="faq__a-inner" data-i18n-html="faq_a5"><b>Death Spiral</b> = The classic collapse loop in speculative GameFi: new player growth plateaus → reward token drops → veteran players liquidate → price drops further → terminal loop.<br><br>Historical precedent: Axie Infinity's SLP plunged 99%+ from peaks. Industry reports show <b>90%+ of GameFi projects have collapsed</b>, with the bulk of $15B funding wiped out.<br><br><b>Why BCM is Different</b>:<br>· <b>BCM issues no speculative tokens</b>, carrying zero token volatility risk<br>· <b>BCM promises zero yield</b>, eschewing mercenary speculators<br>· <b>BCM value stems from design craftsmanship and tactile physical roots</b>, rather than secondary-market manipulation.</div></div>
+        <div class="faq__q" data-i18n="faq_q5">How is BCM Released?</div>
+        <div class="faq__a"><div class="faq__a-inner" data-i18n-html="faq_a5"><b>BCM is distributed through a continuous "One Machine. Every Day. Forever." sustainable release mechanism.</b><br><br>· <b>Daily 24-Hour On-Chain Release</b>: The smart contract automatically generates and releases exactly one bespoke BCM machine every 24 hours for open auction and minting.<br>· <b>Zero Speculation · No Blind Boxes</b>: BCM completely abandons bulk pre-sales, speculative whitelist schemes, and manipulative airdrops, ensuring genuine provenance and story for every machine.<br>· <b>100% Treasury Empowerment</b>: All auction proceeds flow directly into the BCM community treasury to sustain zero-waste craft workshops, scrap recycling, and low-carbon movement advocacy.</div></div>
       </div>
       <div class="faq__item">
-        <div class="faq__q" data-i18n="faq_q6">How are the 7,700 BCM motorbikes composed?</div>
-        <div class="faq__a"><div class="faq__a-inner" data-i18n-html="faq_a6">Combining <b>101 bespoke chassis designs</b> with <b>109 reclaimed bottle cap wheel elements</b>, along with engines, headlamps, and handlebars, procedurally composed on-chain into 7,700 unique, immutable digital motorcycle assets.</div></div>
+        <div class="faq__q" data-i18n="faq_q6">How to Participate in Offline Activities?</div>
+        <div class="faq__a"><div class="faq__a-inner" data-i18n-html="faq_a6"><b>BCM offline activities are 100% open to the public — no NFT ownership is required to participate!</b><br><br>· <b>Interactive Workshops & Exhibitions</b>: We regularly organize hands-on zero-waste craft workshops, scrap yard material foraging, and art installation pop-ups (including the #287 Creative Park "Second Life" showcase and AW design exhibits).<br>· <b>Transforming Waste into Art</b>: We provide sanitized beverage caps, recycled cardstock, cutting mats, and assembly kits. Both kids and adults can experience crafting custom miniature eco-machines.<br>· <b>How to Join</b>: Subscribe via our email newsletter on the homepage or follow BCM social channels to receive the latest workshop dates, city ride-outs, and registration links.</div></div>
       </div>
       <div class="faq__item">
-        <div class="faq__q" data-i18n="faq_q7">What are gas fees, and how much will I pay?</div>
-        <div class="faq__a"><div class="faq__a-inner" data-i18n-html="faq_a7"><b>Gas Fee</b> = The transaction processing fee paid directly to network validators/miners, <b>not collected by the BCM team</b>.<br><br><b>When participating on Layer 2 networks</b>: Gas costs are negligible (typically less than £0.20 / ~$0.25 per transaction).</div></div>
+        <div class="faq__q" data-i18n="faq_q7">What Does CC0 Mean for BCM Digital Art NFTs?</div>
+        <div class="faq__a"><div class="faq__a-inner" data-i18n-html="faq_a7"><b>CC0 (Creative Commons Zero / Public Domain) means that the team has dedicated the 7,700 digital machine collection to the public domain for universal free use.</b><br><br>· <b>Unrestricted Commercial & Remix Rights</b>: Anyone — holder or not — is free to use, modify, monetize, produce apparel, craft physical toys, or integrate BCM machines into games without permission or royalty fees.<br>· <b>Clear Provenance Boundaries</b>:<br>1. <b>101 Chassis Frameworks</b>: 100% original mechanical designs handcrafted and welded over 3 years by our team;<br>2. <b>7,700 Digital Machine NFTs</b>: Open-sourced to the public domain under CC0 1.0 Universal;<br>3. <b>Bottle Cap Trademarks</b>: Sourced from real-world beverages, trademarks remain the property of respective brand owners as a pop-art homage without commercial endorsement.</div></div>
       </div>
       <div class="faq__item">
-        <div class="faq__q" data-i18n="faq_q8">I am a Web3 beginner, how do I participate?</div>
-        <div class="faq__a"><div class="faq__a-inner" data-i18n-html="faq_a8"><b>No complex blockchain knowledge is required</b>. When the daily mint goes live, simply:<br>1. Install a Web3 wallet (MetaMask / Rabby / Coinbase Wallet)<br>2. Fund with a modest amount of ETH<br>3. Visit bcm.motorcycle and connect your wallet to place a bid on today's release<br>4. Confirm the transaction, and the motorbike collectible will transfer directly into your wallet.</div></div>
+        <div class="faq__q" data-i18n="faq_q8">D&D Studio Team Vision</div>
+        <div class="faq__a"><div class="faq__a-inner" data-i18n-html="faq_a8"><b>"Make environmental action fun, inspire the next generation to actively participate, and bridge physical craftsmanship with digital innovation."</b><br><br>· <b>Cross-Generational Resonance</b>: Founded by 20-something designer Jay and tech product veteran Ethan, uniting two generations around a shared passion for zero-waste design and industrial aesthetics.<br>· <b>Living the 5R Zero-Waste Creed</b>: Rejecting empty buzzwords by scavenging waste depots, washing reclaimed caps, and breathing new life into discarded materials through mechanical craft.<br>· <b>A Global Low-Carbon Movement</b>: Expanding from 101 bespoke chassis into custom helmets, physical sculptures, and an international community championing green riding, sustainable transit, and playful eco-consciousness.</div></div>
       </div>
     </div>
   </div>
@@ -2364,14 +2454,11 @@ footer{
 
     <!-- 08.1 Master Visual Spread (101 Bikes × 120 Heroes 左右合并全景总谱) -->
     <div class="cta__spread-wrap">
-      <div class="cta__spread-card" onclick="openHeroModal('images/spread/bcm_master_spread.jpg', currentLang === 'zh' ? 'BCM 全景总谱 · 101 部原创机车车架（左）× 120 位像素跑者环保英雄（右）' : 'BCM Master Visual Spread · 101 Bespoke Motorcycle Frames (Left) × 120 Pixel Runner Eco Heroes (Right)')">
+      <div class="cta__spread-card">
         <picture>
           <source srcset="images/spread/bcm_master_spread.webp" type="image/webp">
           <img src="images/spread/bcm_master_spread.jpg" alt="BCM Master Spread 101 Bikes x 120 Heroes" class="cta__spread-img" loading="lazy">
         </picture>
-        <div class="cta__spread-overlay">
-          <span class="cta__spread-zoom" data-i18n="spread_zoom">🔍 点击查看高清全景大图</span>
-        </div>
       </div>
       <div class="cta__spread-meta">
         <span class="cta__spread-badge" data-i18n="spread_badge">🎨 BCM 全景总谱</span>
@@ -2740,29 +2827,56 @@ const BCM_I18N = {
     team_5r_p3: "Conceiving \"Material Passport\" records to quantify eco-contributions, championing green riding, low-carbon mobility, and healthy living in an engaging, participatory way.",
     faq_num: "07 / FAQ",
     faq_title: "Frequently Asked Questions <span class=\"hl\">About BCM</span>",
-    faq_q1: "What does the name BCM stand for?",
-    faq_a1: "<b>BCM stands for BottleCap Motorcycle</b>.<br>It springs from the clash and reconstruction of two worlds: on one hand, the humblest, everyday disposable item — <b>BottleCap (discarded plastic drink caps)</b>; on the other, the industrial aesthetics of freedom and raw horsepower — the <b>Motorcycle</b>.<br>Through 101 bespoke chassis designs, the team transforms discarded caps into mechanical wheels, ensuring overlooked waste is seen anew as striking contemporary art and digital collectibles.",
-    faq_q2: "What are BCM Heroes, and what is their relationship to BCM Motorbikes?",
-    faq_a2: "<b>BCM Heroes are pure community environmental champions, not riders for the bikes.</b><br>Our core aim in initiating BCM Hero co-creation is exploring <b>\"what Earth-defending eco-champions look like in the eyes of diverse creators — especially children and grassroots makers.\"</b><br><br>· <b>BCM Motorbikes</b>: Symbolising low-carbon mobility and green transit, embodied by 101 bespoke chassis and CC0 on-chain collectibles.<br>· <b>BCM Heroes</b>: An independent, community-driven <b>eco-character universe</b>. Anyone can define their own champion through \"Sketch ➔ Clay Moulding ➔ Assign Eco Superpower\" to receive an archival registry code. You <b>do not need to hold an NFT</b> — participation is 100% barrier-free!",
-    faq_q3: "How are the motorbikes released? (What is the Daily Mint?)",
-    faq_a3: "<b>One Machine. Every Day. Forever.</b><br>The smart contract automatically generates and releases 1 bespoke motorbike every 24 hours for public minting and auction. Upon auction conclusion, the next machine seamlessly generates and begins the subsequent 24-hour cycle.",
-    faq_q4: "How are copyright (CC0) and original provenance defined for BCM NFTs?",
-    faq_a4: "<b>All 101 chassis and mechanical frameworks are 100% original creations of our team</b>, crafted in-house by our industrial designers. The entire 7,700 digital motorbike collection adopts the <b>CC0 1.0 Universal (Public Domain)</b> dedication, freely open for commercial application and remixing. Beverage logos appearing on bottle cap wheels remain the registered trademarks of their respective owners, forming a Pop Art cultural homage without commercial endorsement.",
-    faq_q5: "What is a \"death spiral\", and could it happen to BCM?",
-    faq_a5: "<b>Death Spiral</b> = The classic collapse loop in speculative GameFi: new player growth plateaus → reward token drops → veteran players liquidate → price drops further → terminal loop.<br><br>Historical precedent: Axie Infinity\'s SLP plunged 99%+ from peaks. Industry reports show <b>90%+ of GameFi projects have collapsed</b>, with the bulk of $15B funding wiped out.<br><br><b>Why BCM is Different</b>:<br>· <b>BCM issues no speculative tokens</b>, carrying zero token volatility risk<br>· <b>BCM promises zero yield</b>, eschewing mercenary speculators<br>· <b>BCM value stems from design craftsmanship and tactile physical roots</b>, rather than secondary-market manipulation.",
-    faq_q6: "How are the 7,700 BCM motorbikes composed?",
-    faq_a6: "Combining <b>101 bespoke chassis designs</b> with <b>109 reclaimed bottle cap wheel elements</b>, along with engines, headlamps, and handlebars, procedurally composed on-chain into 7,700 unique, immutable digital motorcycle assets.",
-    faq_q7: "What are gas fees, and how much will I pay?",
-    faq_a7: "<b>Gas Fee</b> = The transaction processing fee paid directly to network validators/miners, <b>not collected by the BCM team</b>.<br><br><b>When participating on Layer 2 networks</b>: Gas costs are negligible (typically less than £0.20 / ~$0.25 per transaction).",
-    faq_q8: "I am a Web3 beginner, how do I participate?",
-    faq_a8: "<b>No complex blockchain knowledge is required</b>. When the daily mint goes live, simply:<br>1. Install a Web3 wallet (MetaMask / Rabby / Coinbase Wallet)<br>2. Fund with a modest amount of ETH<br>3. Visit bcm.motorcycle and connect your wallet to place a bid on today\'s release<br>4. Confirm the transaction, and the motorbike collectible will transfer directly into your wallet.",
-    spread_zoom: "Click to expand HD visual spread",
+    faq_q1: "BCM as Digital Art NFT",
+    faq_a1: "<b>BCM (BottleCap Motorcycle) is far more than a simple NFT — it is an original eco-art initiative fusing physical craftsmanship with generative digital art.</b><br><br>· <b>Handcrafted Physical Origin</b>: Rooted in <b>101 bespoke motorcycle chassis</b> welded and finished from scrap metal parts over 3 years by our design team.<br>· <b>Pop-Art Reclaimed Collage</b>: Sanitizing discarded beverage bottle caps to transform <b>109 iconic cap palettes and silhouettes</b> into mechanical wheel rims.<br>· <b>Generative Digital Twins</b>: Procedurally combining the 101 bespoke chassis with 109 cap wheels into <b>7,700 unique on-chain digital art pieces</b>. Every collectible stands as a digital testament to creative upcycling and responsible consumption.",
+    faq_q2: "What is an NFT?",
+    faq_a2: "<b>An NFT (Non-Fungible Token) is a cryptographic certificate of digital ownership and authenticity secured on a blockchain.</b><br><br>· <b>Unique & Indivisible</b>: Unlike interchangeable cryptocurrencies or cash bills, every NFT possesses a unique on-chain Token ID and cannot be duplicated, split, or swapped 1:1.<br>· <b>True Sovereign Ownership</b>: Unlike traditional internet assets stored on corporate servers, an NFT is permanently recorded on a decentralized public ledger, ensuring your asset remains yours forever in your private wallet.",
+    faq_q3: "What is Web3?",
+    faq_a3: "<b>Web3 represents the decentralized next generation of the internet, centered on the paradigm of \"Read, Write, and Own.\"</b><br><br>· <b>Web 1.0 (Read)</b>: The static portal era where users passively consumed webmaster content.<br>· <b>Web 2.0 (Read + Write)</b>: The social platform era where users create content, but tech giants control user data, accounts, and monetization.<br>· <b>Web 3.0 (Read + Write + Own)</b>: The decentralized era where users truly own their digital identity, data, and virtual assets via cryptographic smart contracts without corporate intermediaries.",
+    faq_q4: "The Relationship Between Web3 and NFTs",
+    faq_a4: "<b>Web3 is the decentralized ecosystem, while NFTs are the essential containers carrying unique value, culture, and sovereign ownership across this new internet.</b><br><br>· <b>Web3 Powers Trust for NFTs</b>: Without decentralized blockchain rails, digital ownership cannot be verified independently of corporate gatekeepers.<br>· <b>NFTs Bring Cultural Substance to Web3</b>: NFTs expand blockchain technology beyond abstract finance into generative art, community identity, and physical-digital crossovers.<br>· <b>How BCM Applies This</b>: BCM utilizes Web3 smart contracts to ensure the ownership and CC0 remix rights of all 7,700 machines permanently belong to the global rider community.",
+    faq_q5: "How is BCM Released?",
+    faq_a5: "<b>BCM is distributed through a continuous \"One Machine. Every Day. Forever.\" sustainable release mechanism.</b><br><br>· <b>Daily 24-Hour On-Chain Release</b>: The smart contract automatically generates and releases exactly one bespoke BCM machine every 24 hours for open auction and minting.<br>· <b>Zero Speculation · No Blind Boxes</b>: BCM completely abandons bulk pre-sales, speculative whitelist schemes, and manipulative airdrops, ensuring genuine provenance and story for every machine.<br>· <b>100% Treasury Empowerment</b>: All auction proceeds flow directly into the BCM community treasury to sustain zero-waste craft workshops, scrap recycling, and low-carbon movement advocacy.",
+    faq_q6: "How to Participate in Offline Activities?",
+    faq_a6: "<b>BCM offline activities are 100% open to the public — no NFT ownership is required to participate!</b><br><br>· <b>Interactive Workshops & Exhibitions</b>: We regularly organize hands-on zero-waste craft workshops, scrap yard material foraging, and art installation pop-ups (including the #287 Creative Park \"Second Life\" showcase and AW design exhibits).<br>· <b>Transforming Waste into Art</b>: We provide sanitized beverage caps, recycled cardstock, cutting mats, and assembly kits. Both kids and adults can experience crafting custom miniature eco-machines.<br>· <b>How to Join</b>: Subscribe via our email newsletter on the homepage or follow BCM social channels to receive the latest workshop dates, city ride-outs, and registration links.",
+    faq_q7: "What Does CC0 Mean for BCM Digital Art NFTs?",
+    faq_a7: "<b>CC0 (Creative Commons Zero / Public Domain) means that the team has dedicated the 7,700 digital machine collection to the public domain for universal free use.</b><br><br>· <b>Unrestricted Commercial & Remix Rights</b>: Anyone — holder or not — is free to use, modify, monetize, produce apparel, craft physical toys, or integrate BCM machines into games without permission or royalty fees.<br>· <b>Clear Provenance Boundaries</b>:<br>1. <b>101 Chassis Frameworks</b>: 100% original mechanical designs handcrafted and welded over 3 years by our team;<br>2. <b>7,700 Digital Machine NFTs</b>: Open-sourced to the public domain under CC0 1.0 Universal;<br>3. <b>Bottle Cap Trademarks</b>: Sourced from real-world beverages, trademarks remain the property of respective brand owners as a pop-art homage without commercial endorsement.",
+    faq_q8: "D&D Studio Team Vision",
+    faq_a8: "<b>\"Make environmental action fun, inspire the next generation to actively participate, and bridge physical craftsmanship with digital innovation.\"</b><br><br>· <b>Cross-Generational Resonance</b>: Founded by 20-something designer Jay and tech product veteran Ethan, uniting two generations around a shared passion for zero-waste design and industrial aesthetics.<br>· <b>Living the 5R Zero-Waste Creed</b>: Rejecting empty buzzwords by scavenging waste depots, washing reclaimed caps, and breathing new life into discarded materials through mechanical craft.<br>· <b>A Global Low-Carbon Movement</b>: Expanding from 101 bespoke chassis into custom helmets, physical sculptures, and an international community championing green riding, sustainable transit, and playful eco-consciousness.",
     spread_badge: "🎨 BCM MASTER SPREAD",
     spread_desc: "101 Bespoke Motorcycle Frames (Left) × 120 Pixel Runner Eco Heroes (Right)",
     cta_title: "Get Notified First<br><span class=\"hl\">for Every Daily Mint</span>",
     cta_lead: "Subscribe to receive 24-hour mint reminders, auction dispatches, and workshop invitations.",
     cta_btn: "Subscribe →",
-    footer_rights: "Chassis & Mechanics = BCM Original Design · 7,700 Motorbike NFTs = CC0 Public Domain · Bottle Cap Trademarks = Property of Respective Owners (Non-Endorsement)"
+    fp_badge: "📸 Real Footprints",
+    fp_title: "Field Footprints · Offline Trips & Handcraft Diary",
+    fp_sub: "From scrap yard sourcing to workshop paper prototypes, documenting the genesis of BCM",
+    fp_hint: "← Swipe horizontally · Click photos to enlarge →",
+    fp1_tag: "📍 Scrap Yard",
+    fp1_title: "Scrap Metal Scavenge",
+    fp1_note: "Visiting waste depots to harvest low-carbon inspiration for chassis design.",
+    fp2_tag: "📍 Cap Hunting",
+    fp2_title: "Supermarket Cap Archive",
+    fp2_note: "Sourcing diverse beverage bottle caps from retail shelves for pop art color palettes.",
+    fp3_tag: "📍 Live Workshop",
+    fp3_title: "Paper Cut & Frame Assembly",
+    fp3_note: "Hands-on prototyping with craft knives, cardstock, and reclaimed caps.",
+    fp4_tag: "📍 Maker Diary",
+    fp4_title: "Physical NFT Prototype",
+    fp4_note: "Precision drilling and manual finishing of physical figurine components.",
+    fp5_tag: "📍 Art Installation",
+    fp5_title: "#287 Creative Park Exhibit",
+    fp5_note: "Second Life framed collage featuring authentic caps and bike mirrors.",
+    fp6_tag: "📍 Wall Artifact",
+    fp6_title: "Adventure Riders Board",
+    fp6_note: "Original rider illustration mounted with vintage Asia Soda tin caps.",
+    ext_badge: "🛵 Merch & Ecology",
+    ext_title: "BCM Physical Accessories & Extensions",
+    ext_sub: "Minimalist merchandise and brand collabs extending digital art into daily life",
+    ext_cup: "D&D Studio BCM Exclusive Mug",
+    ext_heytea: "BBC × Heytea 3D Fluffy Ball",
+    ext_aw19: "BCM AW 19 Event Poster",
+    footer_rights:  "Chassis & Mechanics = BCM Original Design · 7,700 Motorbike NFTs = CC0 Public Domain · Bottle Cap Trademarks = Property of Respective Owners (Non-Endorsement)"
   },
   zh: {
     doc_title: "BCM 🛵 — 原创机车艺术与 CC0 链上数字藏品",
@@ -2925,29 +3039,56 @@ const BCM_I18N = {
     team_5r_p3: "设计“材料护照”系统量化环保成就感，提倡“健康骑车、低碳出行、天然饮食”，用好玩的方式让每个人为地球尽一份力。",
     faq_num: "07 / 常见问题",
     faq_title: "关于 BCM，<span class=\"hl\">新用户常问的</span>问题",
-    faq_q1: "BCM 这个名字代表什么含义？",
-    faq_a1: "<b>BCM 全称为 BottleCap Motorcycle（瓶盖机车 / 樽盖车）</b>。<br>它源于两个维度的强烈碰撞与重构：一边是日常生活中最微小、随手即弃的 <b>BottleCap（废弃塑料瓶盖）</b>；另一边则是代表硬核机械工业美学、自由与热血的 <b>Motorcycle（机车）</b>。<br>主创团队通过 101 款独立原创车架设计，把日常废弃瓶盖重组为电单车机械车轮，让被忽视的日常废品在当代艺术与数字藏品中重新被看见。",
-    faq_q2: "什么是 BCM 英雄？它和 BCM 机车是什么关系？",
-    faq_a2: "<b>BCM 英雄的初衷是纯粹的“社区环保英雄”，绝非用来骑车。</b><br>我们发起 BCM 英雄共创的核心目标，是探索与展现<b>“在不同人（尤其是孩子与社区创作者）心目中，守护地球的环保角色究竟是什么模样”</b>。<br><br>· <b>BCM 机车</b>：代表低碳骑行与绿色出行，是团队倾力打磨的 101 款原创车架与 CC0 链上数字机车资产；<br>· <b>BCM 英雄</b>：是一个完全开放给社区共创的<b>独立环保角色宇宙</b>。每个人都可以通过“画草图 ➔ 捏黏土 ➔ 赋予独特环保超能力”来定义自己心中的环保英雄，获得专属编号与官方数字化档案。你<b>无需预先持有任何 NFT</b>，零门槛即可参与共创！",
-    faq_q3: "机车是如何发行的？（什么是每日一 mint？）",
-    faq_a3: "<b>One Machine. Every Day. Forever.</b><br>智能合约每 24 小时自动生成并释放 1 辆机车进行公开铸造（每日一 mint）与竞拍。当天竞拍结束后，下一辆机车自动生成并开启新一轮 24 小时释放。",
-    faq_q4: "BCM 机车 NFT 的版权 (CC0) 与原创权是如何界定的？",
-    faq_a4: "<b>101 款车身与机械结构 100% 属于团队原创设计</b>：由团队工业设计师原创设计 101 款车身与机械结构。整体 7,700 辆数字机车 NFT 采用 <b>CC0（公共领域）协议</b>，向所有人开放商用与二次创作；轮毂瓶盖上的饮品品牌 Logo 属于对应商标持有人，属于非商业代言性质的当代波普环保致敬。",
-    faq_q5: "什么是\"死亡螺旋\"？BCM 会发生吗？",
-    faq_a5: "<b>死亡螺旋（Death Spiral）</b> = GameFi 项目最常见的崩盘模式：新玩家增长停滞 → 奖励代币价格下跌 → 老玩家撤离 → 价格继续跌 → 死亡循环。<br><br>经典案例：Axie Infinity 的 SLP 代币从高点跌 99%+。2026 年报告显示 <b>90%+ GameFi 项目已死</b>，$15B 融资中大部分归零。<br><br><b>BCM 为什么不同</b>：<br>· <b>BCM 暂不发币</b>，没有 Token 价格风险<br>· <b>BCM 不承诺收益</b>，不靠\"投机型玩家\"驱动需求<br>· <b>BCM 作品价值来自设计本身与实体手作积淀</b>，不靠二级市场炒作",
-    faq_q6: "BCM 的 7,700 辆机车是如何组成的？",
-    faq_a6: "由团队倾力设计的 <b>101 款原创车架</b>，搭配 <b>109 种真实废弃瓶盖转换而来的轮毂元素</b>，加上引擎、车灯、把手等多种可组合配件，在区块链上形成 7,700 辆独一无二、数据不可篡改的链上机车资产。",
-    faq_q7: "Gas 费是什么？我要付多少？",
-    faq_a7: "<b>Gas 费</b> = 区块链交易的\"手续费\"，付给网络矿工/验证者，<b>不是项目方收的</b>。<br><br><b>在 Layer 2 网络上参与时你要付的</b>：仅需极低 Gas 费（~¥1-5）。",
-    faq_q8: "我是 Web3 新手，怎么参与？",
-    faq_a8: "<b>不需要懂复杂的区块链技术</b>。每日一 mint 释放时，你只需要：<br>1. 下载一个 Web3 钱包 App（MetaMask / OKX Wallet / Rabby）<br>2. 准备少量 ETH（几百元即可参与出价或体验）<br>3. 访问 bcm.motorcycle，连接钱包参与今日机车出价<br>4. 确认交易后，机车资产直接进入你的个人钱包",
-    spread_zoom: "点击查看高清全景大图",
+    faq_q1: "BCM 是数字艺术 NFT",
+    faq_a1: "<b>BCM（BottleCap Motorcycle · 瓶盖机车）不仅是一组链上 NFT，更是将“实体工匠手作”与“数字生成艺术”深度结合的原创环保数字艺术品。</b><br><br>· <b>实体与工匠基因</b>：源于主创团队历时 3 年、使用废弃金属零件手工焊接打磨出的 <b>101 款原创机车车架</b>。<br>· <b>波普拼贴色彩</b>：清洗整理日常被遗弃的真实饮料瓶盖，精选 <b>109 种经典瓶盖色彩与轮廓</b>转化为机车轮毂。<br>· <b>链上数字孪生</b>：通过智能合约与算法，将 101 款车架与 109 种瓶盖轮毂程序化组合，生成 <b>7,700 辆独一无二的数字机车艺术品</b>。每一辆车都是废弃物重获新生与负责任消费的数字见证。",
+    faq_q2: "什么是 NFT？",
+    faq_a2: "<b>NFT（Non-Fungible Token · 非同质化代币）是区块链上的“数字所有权与正版防伪证书”。</b><br><br>· <b>唯一性与不可分割</b>：与可以等价互换的比特币或纸币不同，每个 NFT 都拥有独一无二的链上标识编码（Token ID），无法被拆分、复制或等价替换。<br>· <b>真正属于持有者</b>：传统网络上的图片或游戏道具存储在企业中心化服务器中（平台关停就会消失）；而 NFT 记录在公共去中心化区块链上，所有权完全归你个人钱包所有，永久存证且无法被任何第三方剥夺。",
+    faq_q3: "什么是 Web3？",
+    faq_a3: "<b>Web3 是基于区块链技术的“下一代去中心化互联网”，核心是“可读、可写、可拥有”（Read-Write-Own）。</b><br><br>· <b>Web 1.0（只读网络）</b>：门户网站时代，普通用户只能被动浏览官方发布的静态内容（如早期的 Yahoo、新浪）。<br>· <b>Web 2.0（读写网络）</b>：移动与社交平台时代，用户可自由发布图文视频，但数据、账号和流量收益全被中心化巨头垄断。<br>· <b>Web 3.0（读写与拥有）</b>：去中心化网络时代，用户通过加密技术真正拥有自己的数字身份、数据和虚拟资产，依托智能合约实现透明、点对点的价值协作。",
+    faq_q4: "Web3 和 NFT 关系",
+    faq_a4: "<b>Web3 是去中心化的“数字新大陆生态”，而 NFT 则是这片大陆上承载“独特价值、文化与所有权”的核心数字资产载体。</b><br><br>· <b>Web3 为 NFT 提供底层信任</b>：没有 Web3 区块链的去中心化记账，NFT 的确权就无法跨平台流转，仍会受制于中心化单一公司的管控。<br>· <b>NFT 赋予 Web3 丰富的人文艺术实体</b>：NFT 让区块链脱离了晦涩的纯金融代币概念，延伸为数字艺术、创作者经济、社区会员通行证与文化符号。<br>· <b>在 BCM 的结合</b>：BCM 借助 Web3 智能合约，让 7,700 辆电单车的链上确权与 CC0 开源共创权利永久归属于社区，实现去中心化的零废弃环保运动。",
+    faq_q5: "BCM 如何发行？",
+    faq_a5: "<b>BCM 采用“每日一辆 · 永久释放”（One Machine. Every Day. Forever.）的持续、公开、去投机发行机制。</b><br><br>· <b>每 24 小时公开释放 1 辆</b>：智能合约每 24 小时自动生成并上架 1 辆独一无二的 BCM 机车进行公开竞拍与铸造，结标后下一辆车自动接力开启新一轮 24 小时释放。<br>· <b>零投机 · 无盲盒 · 无套路</b>：彻底摒弃批量预售割韭菜、暗箱白名单和炒作空投，让每一辆车都有清晰透明的编号、故事与真实藏家。<br>· <b>100% 收益赋能实体生态</b>：所有拍卖收益直接注入 BCM 社区金库（Treasury），持续资助团队的线下零废弃工坊、废弃物回收与低碳出行推广。",
+    faq_q6: "线下活动如何参与？",
+    faq_a6: "<b>BCM 线下活动面向所有人完全零门槛开放，无需持有任何 NFT 即可免费报名参加！</b><br><br>· <b>丰富的手作工坊与展览</b>：团队定期举办“零废弃瓶盖机车实体工坊”、废品回收站采风、实体打样实录与艺术装置展（如 #287 创意园 Second Life 艺术展、AW 系列展）。<br>· <b>亲手体验“废品变艺术”</b>：现场提供严格清洁消毒的真实废弃瓶盖、硬卡纸、雕刻工具与创作模板，大人与孩子都可以亲手完成专属的纸构/黏土环保机车。<br>· <b>获取最新资讯</b>：在官网页面提交邮箱订阅，或关注 BCM 官方社交平台，即可第一时间获取最新线下工坊排期、城市巡游与活动报名通道。",
+    faq_q7: "BCM 数字艺术 NFT CC0 是什么意思？",
+    faq_a7: "<b>CC0（Creative Commons Zero · 无版权保留）意味着团队将 7,700 辆数字机车资产奉献给公共领域，人人均可自由商用与二创。</b><br><br>· <b>完全开放商用与衍生开发</b>：无论是否持有 NFT，任何人均无需官方授权或支付版税，即可将 BCM 数字机车用于商业产品、T 恤潮服、实体潮玩、二创漫画、3D 打印乃至独立游戏开发。<br>· <b>清晰界定的三大权益边界</b>：<br>1. <b>101 款机车车架</b>：属于主创团队历时 3 年手工焊接打磨的 100% 原创机械设计；<br>2. <b>7,700 辆数字机车 NFT</b>：作为整体艺术生成作品采用 CC0 开放授权，归全球公共领域共享；<br>3. <b>瓶盖品牌商标</b>：来自现实生活消费品，商标所有权仍归原品牌厂商所有，属于当代波普拼贴艺术致敬，非商业代言。",
+    faq_q8: "D&D 团队愿景",
+    faq_a8: "<b>“让环保变得有趣，让年轻一代愿意主动参与，用设计与手作连接物理现实与数字虚拟。”</b><br><br>· <b>两个世代的共鸣</b>：由 20 多岁的青年设计师 Jay 与拥有十余年科技产品经验的产品经理人 Ethan 共同发起。两代人因对低碳地球的责任感和对原创手作的偏执走到一起。<br>· <b>践行零废弃 5R 原则</b>：拒绝空洞口号，坚持从废弃金属堆寻宝、废弃瓶盖收集清洗做起，让被遗弃之物在硬核机械美学中获得第二次生命。<br>· <b>构筑全球低碳文化符号</b>：以 101 部原创机车为起点，未来延伸至骑士头盔、实体雕塑手办与全球骑行社区，倡导“健康骑车、低碳出行、饮食健康”，让每一个人都能用最酷的方式为地球发声。",
     spread_badge: "🎨 BCM 全景总谱",
     spread_desc: "101 部原创机车车架（左）× 120 位像素跑者环保英雄（右）",
     cta_title: "每日一 mint<br><span class=\"hl\">第一时间</span>通知你",
     cta_lead: "订阅邮件，获取每日一 mint 释放提醒、拍卖动态与手作工坊现场资讯。",
     cta_btn: "订阅 →",
-    footer_rights: "车架与机械 = BCM 原创设计 · 7,700 机车 NFT = CC0 公共领域 · 瓶盖商标 = 归各品牌方所有（非商业代言）"
+    fp_badge: "📸 真实足迹",
+    fp_title: "真实足迹 · 线下走访与手作纪实",
+    fp_sub: "从废品回收站取材到工坊桌面打样，记录每一辆机车的真实诞生过程",
+    fp_hint: "← 左右滑动浏览 · 点击照片查看大图 →",
+    fp1_tag: "📍 废品回收站",
+    fp1_title: "废金属堆寻宝",
+    fp1_note: "走访废品回收站，为机车车架寻找低碳灵感与硬核机械美学。",
+    fp2_tag: "📍 瓶盖采风",
+    fp2_title: "超市货架瓶盖谱系",
+    fp2_note: "搜集各大品牌饮品废弃盖色板，建立波普拼贴色彩库。",
+    fp3_tag: "📍 手作工坊",
+    fp3_title: "桌面打样与实录",
+    fp3_note: "刀垫、卡纸与胶带，带创作者亲手完成第一辆纸构机车。",
+    fp4_tag: "📍 手作日记",
+    fp4_title: "NFT 实体手办装配",
+    fp4_note: "电磨精密开孔与乐高模块嵌合，团队硬核打磨物理实体机车。",
+    fp5_tag: "📍 艺术装置",
+    fp5_title: "#287创意园 Second Life",
+    fp5_note: "实车后视镜与经典原盖装裱，实体艺术重塑废弃物生命周期。",
+    fp6_tag: "📍 街头挂板",
+    fp6_title: "亚洲沙示骑手牌",
+    fp6_note: "复古亚洲汽水瓶盖与机车手卡板，将街头骑行融入生活空间。",
+    ext_badge: "🛵 周边配件",
+    ext_title: "BCM 实体配件与周边衍生",
+    ext_sub: "极简设计与品牌联名，让数字艺术自然融入日常",
+    ext_cup: "D&D Studio BCM 专属水杯",
+    ext_heytea: "BBC × 喜茶 3D 毛毛球",
+    ext_aw19: "BCM AW 19 展出活动海报",
+    footer_rights:  "车架与机械 = BCM 原创设计 · 7,700 机车 NFT = CC0 公共领域 · 瓶盖商标 = 归各品牌方所有（非商业代言）"
   }
 };
 
